@@ -1,0 +1,37 @@
+<h2 mat-dialog-title><b>Tambah Pesanan Baru</b></h2>
+<div mat-dialog-content>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Nama Minuman</mat-label>
+        <input matInput [(ngModel)]="data.namaItem">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Rasa</mat-label>
+        <input matInput [(ngModel)]="data.rasa">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Size</mat-label>
+        <input matInput [(ngModel)]="data.size">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Toping</mat-label>
+        <input matInput [(ngModel)]="data.toping">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga</mat-label>
+        <input matInput [(ngModel)]="data.harga">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Pemesan</mat-label>
+        <input matInput [(ngModel)]="data.pemesan">
+    </mat-form-field>
+</div>
+<mat-dialog-actions style="display: flex; justify-content: end;">
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Batal</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan()">Simpan</button>
+</mat-dialog-actions>

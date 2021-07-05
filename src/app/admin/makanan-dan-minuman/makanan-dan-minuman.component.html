@@ -1,0 +1,43 @@
+<div style=" padding:0.5rem;">
+    <div class="container">
+        <button class="btn-tambah" mat-raised-button color="primary" (click)="tambahPesanan({},-1)">Tambah
+            Pesanan</button>
+        <mat-card style=" width: 95%; background-color: rgb(255, 248, 239);">
+            <mat-card-header>
+                <mat-card-title>Daftar Komik</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list *ngFor="let pesanan of pesanans; let idx=index">
+                    <mat-list-item class="posisi1" style="margin-top: 1rem;">
+                        <div>
+                            <img style="width:100px; height: 90px;" src="/assets/sb.jpg" alt="">
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; width: 100%; margin: 0 0 0 1.5rem; align-items: center;">
+                            <div>
+                                <h3 matLine><b>{{pesanan.namaItem}}</b></h3>
+                                <p matLine>
+                                    <span> Harga : {{pesanan.harga}} </span>
+                                </p>
+                                <p matLine>
+                                    <span>Pemesan : {{pesanan.pemesan}}</span>
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn-edit" mat-stroked-button style="color: steelblue;"
+                                    (click)="detailPesanan(pesanan, idx)">Detail</button>
+                                <button class="btn-edit" mat-stroked-button color="primary"
+                                    (click)="tambahPesanan(pesanan, idx)">Edit</button>
+
+                                <button class=" btn-delete" mat-stroked-button color="warn"
+                                    (click)="deletePesanan(pesanan, idx)">Hapus</button>
+                            </div>
+                        </div>
+
+
+
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>

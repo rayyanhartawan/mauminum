@@ -1,0 +1,48 @@
+<ng-container>
+    <!--toolbar-->
+    <mat-toolbar color='primary' class="example-header" *ngIf="userData as user">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Mau Minum</span>
+        <div class="uk-width-expand">
+
+        </div>
+        <p style="color: lightyellow; font-size: 1rem; margin-top: 9px; margin-right: 1rem;">{{user.email}}</p>
+        <button (click)="logout()" mat-raised-button color="warn">Logout</button>
+    </mat-toolbar>
+    <!--end toolbar-->
+
+    <mat-sidenav-container class="admin-container">
+        <mat-sidenav #sidenav mode="side" [position]="'start'" [opened]='true' class="sidenav-left"
+            [fixedInViewport]="true" [fixedTopGap]="60" [fixedBottomGap]="0">
+
+            <mat-nav-list>
+                <mat-list-item routerLink="/admin/tentang-mau-minum">
+                    <mat-icon matListIcon>dashboard</mat-icon>
+                    <h3 matLine>Tentang Mau Minum</h3>
+                </mat-list-item>
+                <mat-list-item routerLink="/admin/makanan-dan-minuman">
+                    <mat-icon matListIcon> local_cafe</mat-icon>
+                    <h3 matLine>Makanan dan Minuman</h3>
+                </mat-list-item>
+                <mat-list-item routerLink="/admin/kontak">
+                    <mat-icon matListIcon>person</mat-icon>
+                    <h3 matLine>Kontak</h3>
+                </mat-list-item>
+            </mat-nav-list>
+
+        </mat-sidenav>
+
+        <mat-sidenav #sidenav mode="side" [position]="'end'" class="example-sidenav" [fixedInViewport]="true"
+            [fixedTopGap]="60" [fixedBottomGap]="0">
+
+        </mat-sidenav>
+        <!--sidenav content-->
+        <mat-sidenav-content style="padding: 20px; background-color: rgb(255, 255, 255);">
+            <!--halaman-halaman tampil disini-->
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+        <!--end sidenav content-->
+    </mat-sidenav-container>
+</ng-container>

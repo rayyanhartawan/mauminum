@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mau-minum": {
+      "hosting": {
+        "myAngular": [
+          "mau-minum"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mau-minum"
+  }
+}

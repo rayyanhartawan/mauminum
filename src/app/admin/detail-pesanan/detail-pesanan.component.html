@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Item : <b>{{data.namaItem}}</b></h2>
+<h3 mat-dialog-title>Nama pemesan : {{data.pemesan}}</h3>
+<div mat-dialog-content>
+    <mat-list>
+        <h3 matSubheader>Detail Pesanan</h3>
+        <mat-list-item>
+            <mat-icon matListIcon>receipt</mat-icon>
+            <p matLine>Id</p>
+            <h3 mat-line>{{data.id}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>local_drink</mat-icon>
+            <p matLine>Nama Item</p>
+            <h3 mat-line>{{data.namaItem}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>inventory_2</mat-icon>
+            <p matLine>Rasa</p>
+            <h3 mat-line>{{data.rasa}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>local_bar</mat-icon>
+            <p matLine>Size</p>
+            <h3 mat-line>{{data.size}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <p matLine>Toping</p>
+            <h3 mat-line>{{data.toping}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>money</mat-icon>
+            <p matLine>Harga</p>
+            <h3 mat-line>{{data.harga}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+    </mat-list>
+</div>
+<mat-dialog-actions style="display: flex; justify-content: end;">
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Tutup</button>
+</mat-dialog-actions>
